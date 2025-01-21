@@ -1,0 +1,202 @@
+#Heading-table {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.Tablexe-container {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr; /* Default for large screens */
+    padding: 70px;
+    background: linear-gradient(to right, rgb(136, 166, 222), rgb(42, 82, 152));
+    gap: 20px; /* Added for spacing between columns */
+}
+
+.table-container {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Using viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.image-container img {
+    width: 100%;
+    max-height: 100%;
+    object-fit:contain;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ffffff;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    height: 120px; /* Default row size */
+}
+
+tr.selected {
+    background-color: #e0e0e0;
+}
+
+tr:hover {
+    background-color: rgb(242, 242, 243, 0.7);
+    cursor: pointer;
+}
+
+table img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.showepic {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.showepic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    color: #000;
+    text-align: center;
+    z-index: 2;
+}
+
+#textofimg {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Small screens (max-width: 600px) */
+@media (max-width: 600px) {
+    #Heading-table {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .Tablexe-container {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        padding: 20px;
+    }
+
+    .image-container {
+        padding: 10px;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+        height: 100px;
+    }
+}
+
+/* Medium screens (max-width: 900px) */
+@media (max-width: 900px) {
+    #Heading-table {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .Tablexe-container {
+        grid-template-columns: 0.5fr 1.5fr; /* Two equal-width columns */
+        padding: 10px;
+    }
+
+    .image-container {
+        padding: 15px;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    table th, table td {
+        padding: 2px;
+        font-size: 14px;
+        height: 100px;
+    }
+}
+
+/* Large screens (min-width: 901px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    #Heading-table {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .Tablexe-container {
+        grid-template-columns: 0.5fr 1.5fr; /* Adjust column proportions */
+        padding: 50px;
+    }
+
+    .image-container {
+        padding: 18px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 16px;
+        height: 120px;
+    }
+}
+
+/* Extra-large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .Tablexe-container {
+        grid-template-columns: 0.4fr 2fr; /* Wider layout for large screens */
+        padding: 70px;
+    }
+
+    .image-container {
+        height: 65vh; /* Use viewport height */
+        padding: 10px; /* Default padding */
+        object-fit: cover;
+    }
+
+    table th, table td {
+        padding: 12px;
+        font-size: 18px; /* Slightly larger font */
+        height: 130px;
+    }
+
+    #Heading-table {
+        font-size: 32px; /* Larger heading for wide screens */
+    }
+}
