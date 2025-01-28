@@ -5,9 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgb(136, 166, 222), rgb(42, 82, 152));
+  background:var(--background-color); ;
   position: relative;
-  transition: width 0.3s ease;
+  transition: width 1s ease;
 }
 
 .logo {
@@ -24,16 +24,14 @@
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 50px;
   font-size: 22px;
   justify-content: center;
   flex-grow: 1;
 }
-
 .navbar-menu li {
   text-align: center;
 }
-
 .navbar-menu li a {
   text-decoration: none;
   color: white;
@@ -41,11 +39,11 @@
 }
 
 .navbar-menu li a.active {
-  color: rgb(70, 18, 173);
+  color: var(--hover-color);
 }
 
 .navbar-menu li a:hover {
-  color: rgb(50, 73, 81);
+  color: var(--hover-color);
 }
 
 .hamburger {

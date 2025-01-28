@@ -1,5 +1,5 @@
 .footer {
-    background-color: #003366; /* Dark blue background */
+    background-color:var(--secodary-color);
     color: #ffffff; 
     padding: 40px 20px;
     margin-top: 20px;

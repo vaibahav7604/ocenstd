@@ -3,7 +3,7 @@ import './HeaderAndUseCases.css';
 import support from "../assets/images/suport.png";
 import Fast from "../assets/images/Fast & secure.png";
 import nodelay from "../assets/images/nodelay.png";
-import cloudicn from "../assets/images/aessts(11).png";
+import useCaseSvg from "../assets/images/usecase.svg"
 
 function HeaderAndUseCases() {
   const headerFeatures = [
@@ -12,14 +12,7 @@ function HeaderAndUseCases() {
     { imgSrc: support, title: "24/7 Support" },
   ];
 
-  const useCases = [
-    { title: "Cloud rendering", color: "pink" },
-    { title: "3Ds Max rendering", color: "cyan" },
-    { title: "Maya rendering", color: "blue" },
-    { title: "Blender rendering", color: "orange" },
-    { title: "Cinema 4D rendering", color: "green" },
-    { title: "AE rendering", color: "purple" }, 
-  ];
+
 
   return (
     <div className="header-and-usecases bg-animation">
@@ -37,13 +30,8 @@ function HeaderAndUseCases() {
       <div className="use-cases">
         <h2>Our render farm is great for...</h2>
         <div className="use-cases-grid">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="use-case" style={{ backgroundColor: useCase.color }}>
-              {useCase.title}
-            </div>
-          ))}
           <div className="cloud-icon">
-            <img src={cloudicn} alt="Cloud Icon" />
+            <img src={useCaseSvg} alt="Cloud Icon" />
           </div>
         </div>
       </div>
