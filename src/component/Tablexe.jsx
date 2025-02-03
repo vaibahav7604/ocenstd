@@ -62,9 +62,9 @@ function Tablexe() {
         </div>
       </div>
       <motion.div
-        initial={{ clipPath: "inset(100% 50% 50% 50%)" }}
-        whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-        transition={{ duration: 0.8, ease: "easeIn" }}
+        initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
+        whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+        transition={{ duration: 0.4, ease: "easeIn" }}
         className="showepic"
       >
         <div className="img-text">

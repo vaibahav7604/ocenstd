@@ -1,24 +1,24 @@
 /* Base Styling */
 .navbar {
-  height: 50px;
   padding: 10px 0;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:var(--background-color); ;
-  position: relative;
-  transition: width 1s ease;
+  background: var(--background-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, height 0.3s ease;
 }
 
 .logo {
   width: 120px;
-  height: 7vh; 
+  height: 7vh;
   object-fit: cover;
-  position: absolute;
-  left: 20px; /* Adjust as needed */
-  top: 10px; /* Adjust as needed */
+  margin-left: 20px;
   transition: width 0.3s ease;
-  z-index: 1;
 }
 
 .navbar-menu {
@@ -29,9 +29,11 @@
   justify-content: center;
   flex-grow: 1;
 }
+
 .navbar-menu li {
   text-align: center;
 }
+
 .navbar-menu li a {
   text-decoration: none;
   color: white;
@@ -53,28 +55,29 @@
   font-size: 20px;
   color: white;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Responsive Styling */
 @media (max-width: 1050px) {
   .logo {
-    width: 100px; 
-    height: 7vh; /* Maintain height proportion */
+    width: 100px;
+    height: 7vh;
   }
 
   .navbar-menu {
-    font-size: 18px; 
+    font-size: 18px;
   }
 }
 
 @media (max-width: 900px) {
   .logo {
-    width: 80px; 
+    width: 80px;
     height: 7vh;
   }
 
   .navbar-menu {
-    font-size: 16px; 
+    font-size: 16px;
   }
 }
 
@@ -94,7 +97,7 @@
     flex-direction: column;
     gap: 5px;
     position: absolute;
-    top: 30px;
+    top: 60px;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
     width: 100%;
@@ -110,7 +113,5 @@
 
   .hamburger {
     display: block;
-    margin-left: auto;
-    padding: 10px;
   }
 }
