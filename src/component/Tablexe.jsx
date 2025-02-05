@@ -1,12 +1,15 @@
-import { useState } from "react";
+import {  useState } from "react";
 import datacenter from "../assets/images/datacenter.jpg";
 import dummy from "../assets/images/dummy.png";
 import dummy2 from "../assets/images/dummy2.png";
 import "./Tablexe.css";
-import { motion } from "framer-motion";
+import { motion, 
+  
+ } from "framer-motion";
 
 function Tablexe() {
   // motion function animation
+
   const HeadingAnimation = {
     initialProp: { opacity: 0, y: -50 },
     whileInViewProp: { opacity: 1, y: 0 },
@@ -62,9 +65,9 @@ function Tablexe() {
         </div>
       </div>
       <motion.div
-        initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-        whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-        transition={{ duration: 0.4, ease: "easeIn" }}
+        // initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
+        // whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+        // transition={{ duration: 0.1, ease: "easeIn" }}
         className="showepic"
       >
         <div className="img-text">
@@ -79,7 +82,8 @@ function Tablexe() {
         <motion.img
           initial={{ opacity: 1 }}
           whileHover={{ filter: "blur(2px)" }}
-          transition={{ duration: 0.3 }}
+          viewport={{ once: false, amount: 0 }}
+          transition={{ duration: 0.2 }}
           src={datacenter}
           alt="some img here"
         />

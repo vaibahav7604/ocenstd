@@ -1,7 +1,6 @@
 /* Base Styling */
 .navbar {
   padding: 10px 0;
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,11 +9,10 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: background 0.3s ease, height 0.3s ease;
 }
 
 .logo {
-  width: 120px;
+  width: 150px;
   height: 7vh;
   object-fit: cover;
   margin-left: 20px;
@@ -32,6 +30,7 @@
 
 .navbar-menu li {
   text-align: center;
+  overflow: hidden;
 }
 
 .navbar-menu li a {
@@ -41,12 +40,13 @@
 }
 
 .navbar-menu li a.active {
-  color: var(--hover-color);
+  color:rgb(185, 214, 242);
 }
 
-.navbar-menu li a:hover {
+/* .navbar-menu li a:hover {
   color: var(--hover-color);
-}
+  transition: none;
+} */
 
 .hamburger {
   display: none;

@@ -5,6 +5,7 @@
     background-size: cover; /* Ensure the background scales properly */
     position: relative;
     overflow: hidden; 
+    padding-top: 10vh;
 }
 
 .header-content {

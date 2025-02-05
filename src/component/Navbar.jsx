@@ -1,30 +1,20 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logoOs from "../assets/images/logo.png";
-import { useScroll, useTransform, } from "framer-motion";
+import logoOs from "../assets/images/OSLogo.png";
+import { AnimatePresence, useScroll, useTransform, } from "framer-motion";
 import { motion } from "framer-motion";
 
 function Navbar() {
   const [navbar, setNavbar] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // framermotion tegs 
-  const activeLinkAnimation = {
-    color: "#ff4d4d", // Change to your desired active color
-    borderBottom: "2px solid #ff4d4d",
-    transition: { duration: 0.3 },
-  };
+  // framer motion 
   const { scrollY } = useScroll();
-  const background = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(0, 183, 255, 0)", "rgba(0, 183, 255, 1)"]
-  );
+  
   const height = useTransform(scrollY, [0, 100], [60, 60]);
 
   return (
     <motion.div
       style={{
-        background,
         height,
       }}
       className="navbar"
@@ -33,19 +23,19 @@ function Navbar() {
       <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         ☰
       </button>
+      <AnimatePresence>
       <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
         <li>
-          <motion.a
+          <a
             href="#"
             onClick={() => {
               setNavbar("home");
               setIsMenuOpen(false);
-              
             }}
-            className={navbar === "home" ? activeLinkAnimation :{}}
+            className={navbar === "home" ? "active" : ""}
           >
             Home
-          </motion.a>
+          </a>
         </li>
         <li>
           <a
@@ -84,6 +74,7 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      </AnimatePresence>
     </motion.div>
   );
 }

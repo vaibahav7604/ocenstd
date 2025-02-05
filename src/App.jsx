@@ -17,6 +17,7 @@ function App() {
       <AllPopular></AllPopular>
       <Tablexe/>
       <Footer/>
+      
       {/* <Routes>
       
       <Route path='/Service'element={}/>

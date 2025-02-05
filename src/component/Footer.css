@@ -1,5 +1,5 @@
 .footer {
-    background-color:var(--secodary-color);
+    background:var(--background-color);
     color: #ffffff; 
     padding: 40px 20px;
     margin-top: 20px;
@@ -58,7 +58,7 @@
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.311);
     padding-top: 10px;
   }
   
